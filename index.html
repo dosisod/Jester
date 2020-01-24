@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<script src="/js/nu.min.js"></script>
+<script src="/js/jester.js"></script>
+<link rel="stylesheet" href="/css/jester.css">
+</head>
+
+<body>
+
+<ul id="jester-tests">
+
+<li>
+	<span class="jester-header">JESTER</span>
+	<span id="total-tests" class="jester">17/100</span>
+	<span id="passed-tests" class="jester-pass">16/17</span>
+	<span id="failed-tests" class="jester-fail">1/17</span>
+</li>
+<li>
+	<span class="jester jester-pass">PASSED - Test1</span>
+</li>
+<li>
+	<span class="jester jester-dropdown" onclick="toggleError(this)">&gt;</span><span class="jester jester-fail">FAILED - Test2</span>
+	<code class="jester-error">test</code>
+</li>
+<li>
+	<span class="jester">WAITING - Test3</span>
+</li>
+
+</ul>
+
+</body>
+
+</html>
