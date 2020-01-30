@@ -1,8 +1,10 @@
 const jester={
 
 Test: class {
-	pass=false
-	fail=false
+	constructor() {
+		this.passed=false
+		this.failed=false
+	}
 },
 
 run: function(tests) {
@@ -19,11 +21,11 @@ run: function(tests) {
 	console.log(tests[0].fail)
 
 	for (const i in tests) {
-		if (tests[i].pass) {
+		if (tests[i].passed) {
 			passes.addBoth()
 			fails.addBottom()
 		}
-		else if (tests[i].fail) {
+		else if (tests[i].failed) {
 			fails.addBoth()
 			passes.addBottom()
 		}
@@ -39,11 +41,9 @@ run: function(tests) {
 }
 
 class Fraction {
-	numerator=0
-	denomenator=0
-
 	constructor(denomenator) {
 		this.denomenator=denomenator || 0
+		this.numerator=0
 	}
 
 	addBoth() {
